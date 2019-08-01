@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}">
+  <title>Info</title>
+  <h1>Info</h1>
+</head>
+<body>
+  <br>
+    <div class = "aaa">
+      <a href="{{ url_for('home') }}" class = "link">Home</a>
+    </div>
+  <br>
+<div class = "table">
+<table style="width:100%" border = "1">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Gender</th> 
+    <th>Stupidn"ess Level</th>
+  </tr>
+  
+    {%for i in idiots %} 
+  <tr>
+    <td>{{i.idiot_first_name}}</td> 
+    <td>{{i.idiot_last_name}}</td>
+    <td>{{i.idiot_gender}}</td>
+    <td>{{i.idiot_stupidness_level}}</td>
+  </tr>
+    {%endfor%} 
+</table>
+</div>
+</body>
+</html>
